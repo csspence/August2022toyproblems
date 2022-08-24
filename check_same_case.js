@@ -16,6 +16,11 @@ Examples
 '0' and '?' returns -1
 */
 
-function sameCase(a, b){
-  return 0;
+let sameCase = (a, b) => {
+  let letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+  return !letters.includes(a.toLowerCase()) ? -1
+  : !letters.includes(b.toLowerCase()) ? -1
+  : a === a.toLowerCase() && b === b.toLowerCase() ? 1
+  : a === a.toUpperCase() && b === b.toUpperCase() ? 1
+  : 0;
 }
